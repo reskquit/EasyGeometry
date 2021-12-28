@@ -271,16 +271,17 @@ namespace EasyGeometry.elements
                 ln.Y1 = Points[i].Y;
                 ln.X2 = Points[i + 1].X;
                 ln.Y2 = Points[i + 1].Y;
+                
                 ln.Stroke = Brushes.Black;
                 ln.StrokeThickness = 2;
                 ln.Name = Name + this.GetHashCode() + "Line" + "_" + Convert.ToString(i);
                 Lines.Add(ln);
             }
             Line ln1 = new Line();
-            ln1.X1 = Points[0].X;
-            ln1.Y1 = Points[0].Y;
-            ln1.X2 = Points[Points.Count - 1].X;
-            ln1.Y2 = Points[Points.Count - 1].Y;
+            ln1.X1 = Points[Points.Count - 1].X;
+            ln1.Y1 = Points[Points.Count - 1].Y;
+            ln1.X2 = Points[0].X;
+            ln1.Y2 = Points[0].Y;
             ln1.Stroke = Brushes.Black;
             ln1.Name = Name + this.GetHashCode() + "Line" + "_" + Convert.ToString(Points.Count - 1);
             ln1.StrokeThickness = 2;
